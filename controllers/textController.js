@@ -34,6 +34,9 @@ const convertInputToLetter = (number) => {
     })
     .reduce((previous, current) => {
       let mergedPreviousAndCurrent = [];
+      if (previous === undefined || current === undefined ) {
+          return []
+      }
       previous.forEach((previousLetter) => {
         current.forEach((currentLetter) => {
           mergedPreviousAndCurrent.push(previousLetter + currentLetter);
